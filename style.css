@@ -1,21 +1,23 @@
-*{
+* {
     box-sizing: border-box;
 }
 
 
 /* ////////////// login //////////////*/
-section{
+section {
     z-index: 3;
 }
-.logo-login img{
+
+.logo-login img {
     position: absolute;
     top: 72px;
     right: 0;
     left: 0;
-    margin:auto;
+    margin: auto;
     width: 130px;
 }
-.input-login input{
+
+.name-login input {
     position: absolute;
     top: 42%;
     left: 0;
@@ -33,7 +35,8 @@ section{
     line-height: 25px;
     letter-spacing: 0em;
 }
-.button-login button{
+
+.button-login button {
     position: absolute;
     width: 109px;
     height: 45px;
@@ -53,14 +56,16 @@ section{
     border: 1px solid #D7D7D7;
     color: #696969;
 }
-.loading{
+
+.loading {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    margin-left: 500px;
+
+
 }
 
 /* ////////////// topo da pagina //////////////*/
-header{
+header {
     height: 80px;
     width: 100%;
     display: flex;
@@ -72,45 +77,47 @@ header{
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
     z-index: 1;
 }
-.logo{
+
+.logo {
     margin-left: 22px;
     width: 75px;
     height: 53px;
 }
-.profile{
-    margin-right: 22px;
-    font-size: 42px;
-}
-.hidden{
+
+.hidden {
     display: none;
 }
+
 /* ////////////// area das mensagens //////////////*/
-main{
+main {
     margin-top: 80px;
     margin-bottom: 80px;
 }
-strong{
+
+strong {
     font-weight: 700;
 }
-span{
-    font-weight: light;
-}
-.area{
+
+.area {
     height: 40px;
     display: flex;
     align-items: center;
     margin-bottom: 4px;
 }
-.status{
+
+.status {
     background: #DCDCDC;
 }
-.message{
+
+.message {
     background: #FFFFFF;
 }
-.private_message{
+
+.private_message {
     background: #FFDEDE;
 }
-.dark{
+
+.dark {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -118,7 +125,8 @@ span{
     z-index: 2;
     background: rgba(0, 0, 0, 0.6);
 }
-b{
+
+b {
     font-family: Roboto;
     font-size: 14px;
     font-weight: 300;
@@ -127,7 +135,7 @@ b{
 }
 
 /*////////////// configurações da página //////////////*/
-aside{
+aside {
     position: fixed;
     top: 0;
     width: 259px;
@@ -137,7 +145,8 @@ aside{
     z-index: 3;
     overflow-y: scroll;
 }
-.side-bar-title{
+
+.side-bar-title {
     width: 100%;
     height: 80px;
     display: flex;
@@ -151,13 +160,17 @@ aside{
     line-height: 19px;
     text-align: center;
 }
-.name-users{
+
+.username {
     position: relative;
     display: flex;
     height: 36px;
     margin-left: 20px;
 }
-.name-users p{
+
+
+
+.username p {
     margin-left: 8px;
     font-family: Roboto;
     font-size: 16px;
@@ -165,7 +178,8 @@ aside{
     line-height: 25px;
     letter-spacing: 0em;
 }
-.info-visibility{
+
+.choose {
     height: 66px;
     display: flex;
     align-items: center;
@@ -176,32 +190,87 @@ aside{
     font-weight: 700;
     line-height: 19px;
 }
-.icon-bar{
+
+.icon-bar {
     font-size: 26px;
 }
-.icon1{
-    width: 23.44px;
-    height: 17.19px;
-}
-.vector{
-    width: 20.31px;
-    height: 20.31px;
-}
-.icon3{
-    width: 15.12px;
-    height: 20.62px;
-}
-.icon4{
-    position: absolute;
-    right: 5px;
-}
-.icon5{
-    position: absolute;
-    right: 5px;
+
+.everybody {
+    height: 30.93753433227539px;
+    width: 42.18772506713867px;
+    border-radius: 0px;
 }
 
+.image-users-all {
+
+    height: 17.18752098083496px;
+    width: 23.437623977661133px;
+    margin-top: 3.90625px;
+    border-radius: 0px;
+
+}
+
+
+.image-users {
+
+    height: 20.3125px;
+    width: 20.3125px;
+    margin-left: 2.34375px;
+    margin-top: 2.34375px;
+    border-radius: 0px;
+
+
+}
+
+.check {
+
+    height: 10px;
+    width: 12px;
+    border-radius: 0px;
+    margin-left: 23px;
+    margin-top: 6px;
+
+}
+
+.choose-visibility {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+}
+
+.visibility {
+    margin-top: 10px;
+    margin-left: 8px;
+
+}
+
+.visibility p {
+
+    margin-left: 8px;
+
+}
+
+.visibility-options {
+
+    margin-top: 10px;
+    display: flex;
+}
+
+.visibility-image {
+    height: 20.625px;
+    width: 15.125px;
+    border-radius: 0px;
+}
+
+
+
+
+
 /*//////////////rodapé da página //////////////*/
-footer{
+footer {
     height: 80px;
     width: 100%;
     display: flex;
@@ -214,11 +283,13 @@ footer{
     border: 2px solid black;
     z-index: 1;
 }
-.send{
+
+.send {
     font-size: 26px;
     margin-right: 22px;
 }
-.input-message{
+
+.input-message {
     margin-left: 22px;
     width: 85%;
     height: 80%;
@@ -229,6 +300,7 @@ footer{
     color: #000000;
     border: 0px;
 }
-.input-message::placeholder{
+
+.input-message::placeholder {
     font-style: italic;
 }

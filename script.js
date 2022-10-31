@@ -119,25 +119,25 @@ function findUsers(){
 //////////inserir os usuários dinâmicamente//////////
 function insertUsers(arrayUsers){
     arrayUsers.data.forEach(element =>{
-        users.innerHTML += `<div onclick = "select(this)" class="name-users"><img class="Vector" src="/img/Vector.png" alt="usuário"><p>${element.name}</p></div>`
+        users.innerHTML += `<div onclick = "select(this)" class="username"><img class="image-users" src="/img/user.png"><p>${element.name}</p></div>`
     })
 }
 //////////escolher o usuário para enviar a mensagem//////////
 function select(element){
-    let check = document.querySelectorAll(".icon4");
+    let check = document.querySelectorAll(".check");
     check.forEach(element => {
         element.classList.add("hidden");
     })
-    element.innerHTML += "<img class='icon4' src='./assets/greenchek.png' alt='check'>";
+    element.innerHTML += "<img class='check' src='./img/check.png'>";
     to = element.innerText;
 }
 //////////escolher a privacidade da mesnsagem//////////
 function privacy(p){
-    let check = document.querySelectorAll(".icon5");
+    let check = document.querySelectorAll(".check");
     check.forEach(element => {
         element.classList.add("hidden");
     })
-    p.innerHTML += "<img class='icon5' src='./assets/greenchek.png' alt='check'>";
+    p.innerHTML += "<img class='check' src='./img/check.png'>";
     if(p.innerText == "private_message"){
         type = "message";
     }else{

@@ -10,14 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Qahiri&family=Raleway&family=Righteous&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Bate Papo UOL</title>
-    <link rel="shortcut icon" href="img/uol.png" type="image/x-icon">
 </head>
 <body>
     <section>
         <div class="logo-login">
-            <img src="./img/logo 1.png" alt="logo-uol">
+            <img src="./img/logo 1.png">
         </div>
-        <div class="input-login">
+        <div class="name-login">
             <input class="name" type="text" placeholder="Digite o seu nome">
         </div>
         <div class="button-login" id="but-log">
@@ -26,12 +25,12 @@
     </section>
     <section>
         <div class="loading hidden">
-            <img src="./img/loading.gif" alt="carregando">
+            <img src="./img/tenor.gif">
         </div>
     </section>
     <header class="hidden">
-        <img class="logo" src="./img/logo 1.png" alt="logo-uol">
-        <img src="./img/Vector.png" onclick="settingsMessage()" class="profile" alt="configurações">
+        <img class="logo" src="./img/logo 1.png">
+        <img class="everybody" src="./img/Vector.png" onclick="settingsMessage()">
     </header>
     <aside class="hidden">
         <div class="side-bar-title">
@@ -39,18 +38,18 @@
             <h1>para enviar mensagem:</h1>
         </div>
         <div class="users">
-                <div onclick="select(this)" class="name-users"><img class="icon1" src="./img/Vector.png" alt="enviar para todos"><p>todos</p><img class='icon4' src='./img/check.png' alt='check'></div>
+                <div onclick="select(this)" class="username"><img class="image-users-all" src="./img/Vector.png"><p>todos</p><img class="check" src="./img/check.png"></div>
         </div>
-        <div class="info-visibility">
+        <div class="choose-visibility">
             <p>Escolha a visibilidade</p>
         </div>
-        <div class="lock">
-            <div class="name-users"><img class="icon3" src="./img/unlock.png" alt="cadeado">
+        <div class="visibility">
+            <div class="visibility-options"><img class="visibility-image-" src="./img/cadeadoaberto.png">
                 <p onclick="privacy(this)">Público</p>
-                <img class='icon5' src='./img/check.png' alt='check'>
+                <img class="check" src="./img/check.png">
             </div>
-            <div class="name-users"><img class="icon3" src="./img/lock.png" alt="cadeado">
-                <p onclick="privacy(this)">reservadamente</p>
+            <div class="visibility-options"><img class="visibility-image" src="./img/cadeadofechado.png">
+                <p onclick="privacy(this)">Reservadamente</p>
                 
             </div>
         </div>
