@@ -1,20 +1,22 @@
 let conteudoMensagem = document.querySelector("header");
 let escreverMensagem = document.querySelector("footer");
 let loadingS = document.querySelector("section");
-let userName = document.querySelector(".name");
-let loading = document.querySelector(".loading");
-let send = document.querySelector("send");
-let sendMessage = document.querySelector("footer input");
-let MensageBackgroun = document.querySelector(".changeMensageBackground");
-let sidebar = document.querySelector("aside");
 let list = document.querySelector("ul");
 let responseChat = null;
+let userName = document.querySelector(".name");
+let loading = document.querySelector(".loading");
 let higher = null;
 let users = document.querySelector(".users");
 let to = null;
 let type = "message";
+let send = document.querySelector("send");
+let sendMessage = document.querySelector("footer input");
+let MensageBackgroun = document.querySelector(".changeMensageBackground");
+let sidebar = document.querySelector("aside");
 
-//////////check user name//////////
+
+
+//check user name///
 function checkName(){
     userName = userName.value;
     let name = {   
@@ -26,13 +28,13 @@ function checkName(){
     promisse.catch(erroName);
 }
 
-//////////Nome não compatível//////////
+///Nome Error///
 function erroName(erro){
     let statusCode = erro.responseChat.status;
     alert("Este nome já esta sendo usado");
 }
 
-//////////sucesso no login//////////
+//sucesso nome, login//
 function loadingChat(){
     loading.classList.remove("hidden");
     setTimeout(hiddenLoadingChat,3000);
@@ -48,13 +50,13 @@ function placeChat(){
     setInterval(loadMessages,3000);
 }
 
-//////////requisição das ultimas 100 mensagens na tela//////////
+//requisição, 100 mensagens na tela//
 function loadMessages(){
     let promisse = axios.get("https://mock-api.driven.com.br/api/v6/uol/messages");
     promisse.then(placeMensage);
 }
 
-//////////insere as mensagens no html//////////
+//insere as mensagens no html///
 function placeMensage(responseChat){
     responseChat = responseChat.data;
     list.innerHTML = "";
@@ -75,30 +77,30 @@ function placeMensage(responseChat){
     setInterval(keepConection, 5000);
 }
 
-//////////verifica e retorna o tipo de mensagem//////////
+///verifica e retorna o type de message/////
 function checkMensageType(element){
     if(element.type == "status"){
         return("status");
     }else if (element.type == "message"){
         return("message")
-    }else if (element.type == "private_message"){
-        return("private_message");
+    }else if (element.type == "privateMessage"){
+        return("privateMessage");
     }
 }
 
-//////////scroll all message//////////
+////scroll all message///
 function scrollMessages(){
     let lastMessage = document.getElementById("99")
     lastMessage.scrollIntoView();
 }
 
 
-//////////keep user connected//////////
+//keep user connected////
 function keepConection(){
     let request = axios.post("https://mock-api.driven.com.br/api/v6/uol/status",{name: userName})
 }
 
-//////////setting of the menssage//////////
+//setting of the menssage////
 function settingsMessage(){
     sidebar.classList.remove("hidden");
     MensageBackgroun.classList.add("dark");
@@ -109,7 +111,7 @@ function exitSettings(){
     MensageBackgroun.classList.remove("dark")
 }
 
-//////////search users/////////
+//////////search users//////
 function placeUsers(){
     let request = axios.get("https://mock-api.driven.com.br/api/v6/uol/participants");
     request.then(insertUsers);
@@ -121,7 +123,7 @@ function insertUsers(arrayUsers){
         users.innerHTML += `<div onclick = "select(this)" class="username"><img class="image-users" src="/img/user.png"><a>${element.name}</a></div>`
     })
 }
-//////////chose user to send menssage//////////
+///////chose user to send menssage//
 function select(element){
     let check = document.querySelectorAll(".check");
     check.forEach(element => {
@@ -130,7 +132,7 @@ function select(element){
     element.innerHTML += "<img class='check' src='./img/check.png'>";
     to = element.innerText;
 }
-//////////choose the privacity of the mensage//////////
+///choose the privacity of the mensage/////
 function privacy(a){
     let check = document.querySelectorAll(".check");
     check.forEach(element => {
@@ -143,7 +145,7 @@ function privacy(a){
         type = "private_message";
     }
 }
-//////////sent mensage//////////
+//////sent mensage/////
 function sendTo(){
     let message = {
         from: `${userName}`,
@@ -162,6 +164,19 @@ document.addEventListener("keypress", function(e){
         btn.click();
     }
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
 //////////  Error / //////////
 function criticalError(erro){
     window.location.reload();

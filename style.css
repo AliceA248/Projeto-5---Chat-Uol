@@ -2,8 +2,6 @@
     box-sizing: border-box;
 }
 
-
-/* ////////////// login //////////////*/
 section {
     z-index: 3;
 }
@@ -44,8 +42,6 @@ section {
     right: 0;
     margin: auto;
     top: 50%;
-    background: #E7E7E7;
-    border-radius: 9px;
     font-family: Roboto;
     font-size: 18px;
     font-style: normal;
@@ -55,6 +51,8 @@ section {
     text-align: center;
     border: 1px solid #D7D7D7;
     color: #696969;
+    background: #E7E7E7;
+    border-radius: 9px;
 }
 
 .loading {
@@ -64,18 +62,18 @@ section {
 
 }
 
-/* ////////////// topo da pagina //////////////*/
+/* top */
 header {
     height: 80px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #FFFFFF;
-    position: fixed;
     top: 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
     z-index: 1;
+    background: #FFFFFF;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
@@ -84,11 +82,11 @@ header {
     height: 53px;
 }
 
+
 .hidden {
     display: none;
 }
 
-/* ////////////// area das mensagens //////////////*/
 main {
     margin-top: 80px;
     margin-bottom: 80px;
@@ -98,7 +96,9 @@ strong {
     font-weight: 700;
 }
 
-
+span {
+    font-weight: light;
+}
 
 .area {
     height: 40px;
@@ -115,7 +115,7 @@ strong {
     background: #FFFFFF;
 }
 
-.private_message {
+.privateMessage {
     background: #FFDEDE;
 }
 
@@ -136,7 +136,7 @@ b {
     margin-left: 8px;
 }
 
-/*////////////// configurações da página //////////////*/
+/* aside */
 aside {
     position: fixed;
     top: 0;
@@ -170,7 +170,14 @@ aside {
     margin-left: 20px;
 }
 
-
+.username a {
+    margin-left: 8px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+}
 
 .username p {
     margin-left: 8px;
@@ -201,6 +208,7 @@ aside {
     height: 30.93753433227539px;
     width: 42.18772506713867px;
     border-radius: 0px;
+    margin-right: 25px;
 }
 
 .image-users-all {
@@ -271,7 +279,7 @@ aside {
 
 
 
-/*//////////////rodapé da página //////////////*/
+/*bottom*/
 footer {
     height: 80px;
     width: 100%;
@@ -281,8 +289,7 @@ footer {
     background-color: #FFFFFF;
     position: fixed;
     bottom: 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
-    border: 2px solid black;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
     z-index: 1;
 }
 
